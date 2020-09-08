@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/fixed.css" />
+  </head>
+  <body data-spy="scroll" data-target="#navBar">
+    <!--Begin: Home Section-->
+    <div id="home">
+      <!--Begin Navigation-->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#"><img src="utils/logo.png" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navBar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navBar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About YFRB</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#overview">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#connect">Connect</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                href="https://docs.yfrb.finance/"
+                >FAQs</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!--End Navigation-->
+      <!--Begin Landing-->
+      <div class="landing">
+        <div class="home-wrap">
+          <div class="home-inner"></div>
+        </div>
+        <div class="caption text-center">
+          <!-- <h1>YFRB</h1> -->
+          <img width="40vw" src="utils/logo.png" />
+          <h3>YEARN FLASH LOAN ARBITRAGE FINANCE</h3>
+          <div class="heading-underline"></div>
+          <h3>
+            YFRB is a utility token <br />
+            that leverages multiple DeFi platforms to provide beneficial returns
+            to YFRB token holders.<br />
+            Eth raised in pre-sale will be used<br />
+            to provide Uniswap liquidity and to further develop and market the
+            YFRB platform.
+          </h3>
+          <a class="btn btn-outline-light" href="#">Launching Now!</a>
+        </div>
+      </div>
+      <!--End Landing-->
+    </div>
+    <!--End: Home Section-->
+    <!--Begin: About Section-->
+    <div id="about">
+      <div>
+        <div class="row dark text-center">
+          <div class="col-12">
+            <h3 class="heading">About Us</h3>
+            <div class="heading-underline"></div>
+          </div>
+          <div class="col-md-12">
+            <p>
+              The goal of this project is to develop a platform that allows YFRB
+              token holders to utilize flash loans from platforms like AAVE,
+              dyDx, etc. to engage in arbitrage opportunities on multiple
+              decentralized exchanges. Flash loans are a unique loan option that
+              allows for users to borrow funds without collateral as long as the
+              amount borrowed is repaid in the same Ethereum transaction. Flash
+              loans are not easily accessible to the average crypto investor
+              without a strong technical background or understanding of the
+              inner workings of smart contracts. YFRB aims to bridge this
+              knowledge gap by providing tools that allow even average investors
+              to find potential profitable arbitrage opportunities.
+            </p>
+          </div>
+        </div>
+        <div class="fixed-wrap">
+          <div class="fixed"></div>
+        </div>
+      </div>
+    </div>
+    <!--End: Detail Section-->
+    <!--Begin: Stats Section-->
+    <div id="overview" class="offset">
+      <div class="fixed-background">
+        <div class="row dark text-center">
+          <div class="col-12">
+            <h3 class="heading">Overview</h3>
+            <div class="heading-underline"></div>
+          </div>
+          <!-- <div class="row text-center"> -->
+          <div class="col-md-6 text-center">
+            <div id="chDonut1" style="width: 100%; min-height: 400px"></div>
+            <h5>Funds Used For</h5>
+          </div>
+          <div class="col-md-6">
+            <div id="chDonut2" style="width: 100%; min-height: 400px"></div>
+            <h5>Token Metrics</h5>
+          </div>
+          <!-- </div> -->
+          <!-- <div class="col-md-6">
+            <div class="row text-center">
+              <div class="col-md-12">
+                <div class="noselect">
+                  <canvas id="chDonut2"></canvas>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div id="legend2" class="chartjs-legend" class="noselect"></div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="fixed-wrap">
+          <div class="fixed"></div>
+        </div>
+      </div>
+    </div>
+    <!--End: Stats Section-->
+    <!-- Start connect Section -->
+    <div id="connect" class="offset">
+      <footer>
+        <div class="fixed-background">
+          <div class="row dark text-center">
+            <div class="col-12">
+              <h3>Connect with Us</h3>
+              <div class="heading-underline"></div>
+            </div>
+            <div class="col-md-12 text-center">
+              <a href="https://t.me/yfrb_finance" target="_blank">
+                <i class="fab fa-telegram fa-3x"></i
+              ></a>
+              <a href="https://twitter.com/yfrbfinance" target="_blank"
+                ><i class="fab fa-twitter fa-3x"></i
+              ></a>
+              <a href="https://discord.gg/9etTxx4" target="_blank"
+                ><i class="fab fa-discord fa-3x"></i
+              ></a>
+              <hr class="socket" />
+              &copy;YFRB
+            </div>
+          </div>
+          <div class="fixed-wrap">
+            <div class="fixed"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- End connect Section-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- <script src="js/chart.js"></script> -->
+    <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+    <script src="node_modules/echarts/dist/echarts.min.js"></script>
+    <script src="js/echart.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+  </body>
+</html>
