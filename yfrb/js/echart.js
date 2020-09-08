@@ -17,7 +17,7 @@ data.seriesData = [
 ];
 option = {
   title: {
-    //text: "Funds Used For",
+    //text: "Token Metrics",
     // subtext: "Subtext",
     //left: "center",
   },
@@ -36,7 +36,7 @@ option = {
   },
   series: [
     {
-      name: "Funds Used For",
+      name: "Token Metrics",
       type: "pie",
       radius: ["40%", "80%"],
       center: ["50%", "50%"],
@@ -75,7 +75,7 @@ data.seriesData = [
 ];
 option = {
   title: {
-    //text: "Funds Used For",
+    //text: "Token Metrics",
     // subtext: "Subtext",
     //left: "center",
     //top: "1",
@@ -95,7 +95,7 @@ option = {
   },
   series: [
     {
-      name: "Funds Used For",
+      name: "Token Metrics",
       type: "pie",
       radius: ["40%", "80%"],
       center: ["50%", "50%"],
