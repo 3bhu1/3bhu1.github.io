@@ -6,8 +6,8 @@ body {
 .offset:before {
   display: block;
   content: "";
-  height: 3rem;
-  margin-top: -3rem;
+  height: 4rem;
+  margin-top: -4rem;
 }
 body {
   overflow-x: hidden;
