@@ -37,9 +37,6 @@ body {
   color: white !important;
 }
 /** Landing Page **/
-.home-inner {
-  background-image: url("utils/background.png");
-}
 .caption {
   width: 100%;
   max-width: 100%;
