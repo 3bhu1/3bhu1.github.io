@@ -6,13 +6,14 @@ body {
 .offset:before {
   display: block;
   content: "";
-  height: 4rem;
-  margin-top: -4rem;
+  height: 3rem;
+  margin-top: -3rem;
 }
 body {
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   color: white;
+  background-image: url("utils/background.png");
 }
 /*-------Navigation---*/
 .navbar {
@@ -72,11 +73,7 @@ body {
 /** Landing Page **/
 
 /** About Section **/
-#about {
-  /* background-image: url("utils/about.png"); */
-  /* height: 100px; */
-  background-color: #333333;
-}
+
 /** About Section **/
 /** About Section **/
 #roadmap {
@@ -189,7 +186,4 @@ hr.socket {
     -moz-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
   background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%),
     radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
-}
-#about {
-  background-image: url("/utils/Deep\ Space.jpg") !important;
 }
