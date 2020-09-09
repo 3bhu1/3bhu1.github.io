@@ -11,10 +11,11 @@
 .year {
   color: #e8e8e8;
   font-size: 30px;
-  float: right;
-  position: relative;
-  right: 75px;
-  top: 20px;
+  float: center;
+  /* position: relative; */
+  /* right: 75px; */
+  /* top: 10px; */
+  margin: auto;
   font-weight: bold;
 }
 
@@ -189,18 +190,18 @@
 }
 
 .num-date {
-  font-size: 150px;
+  font-size: 130px;
   width: 50%;
   margin: 0 auto;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .day {
   width: 50%;
-  margin: 0px auto;
+  margin: auto;
   font-size: 30px;
   position: relative;
-  bottom: 60px;
+  bottom: 50px;
 }
 
 .current-events {
