@@ -188,3 +188,9 @@ hr.socket {
   background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%),
     radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
 }
+.card-title {
+  position: relative;
+  float: left;
+  left: 40px;
+  padding: 6px;
+}
