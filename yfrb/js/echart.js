@@ -69,9 +69,9 @@ data.legendData.forEach(function (v, i) {
 data.seriesData = [
   { name: "Sale", value: 30 },
   { name: "Team", value: 5 },
-  { name: "Staking", value: 5 },
+  { name: "Marketing", value: 5 },
   { name: "Uniswap Liquidity", value: 20 },
-  { name: "Marketing", value: 40 },
+  { name: "Staking", value: 40 },
 ];
 option = {
   title: {
