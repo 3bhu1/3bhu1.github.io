@@ -11,11 +11,11 @@
 .year {
   color: #e8e8e8;
   font-size: 30px;
-  float: center;
-  /* position: relative; */
-  /* right: 75px; */
-  /* top: 10px; */
-  margin: auto;
+  float: right;
+  position: relative;
+  right: 110px;
+  top: 10px;
+  margin: 0 auto;
   font-weight: bold;
 }
 
