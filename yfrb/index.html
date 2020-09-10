@@ -37,7 +37,7 @@
               <a class="nav-link" href="#overview">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#events">Sale</a>
+              <a class="nav-link" href="#events">Announcements</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#connect">Connect</a>
@@ -59,7 +59,8 @@
         <div class="home-wrap">
           <div class="home-inner"></div>
         </div>
-        <div class="caption text-center">
+      </div>
+        <div class="caption text-center clearfix">
           <!-- <h1>YFRB</h1> -->
           <img width="40vw" src="utils/logo.png" />
           <h3>YEARN FLASH LOAN ARBITRAGE FINANCE</h3>
@@ -72,10 +73,16 @@
             to provide Uniswap liquidity and to further develop and market the
             YFRB platform.
           </h3>
-          <a class="btn btn-outline-light" href="#">Launching Now!</a>
+          <h3>
+            Our Bounce Swap has concluded, thank you for the overwhelming support!
+            <sup><span class="badge badge-info">New</span></sup>
+            </br>
+            <mark style="background-color: #FFFF99;color: green; font-size:15px; font-weight: 700px;">You can now start trading on Uniswap! </mark>
+          </h3>
+          <a class="btn btn-outline-light" target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=0x5d1b1019d0afa5e6cc047b9e78081d44cc579fc4&outputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48" style="background-color:rgb(255, 0, 122);">Start Trading!</a>
         </div>
-      </div>
-      <!--End Landing-->
+      
+      <!--End Landing--> 
     </div>
     <!--End: Home Section-->
     <!--Begin: About Section-->
@@ -265,17 +272,22 @@
       <div class="fixed-background">
         <div class="row text-center">
           <div class="col-12">
-            <h3 class="heading">Upcoming Event</h3>
+            <h3 class="heading">Announcements</h3>
             <div class="heading-underline"></div>
           </div>
           <div class="col-md-12">
-            <div class="calendar-left">
+            <div class="calendar-left" style="height:auto;">
+              Roadmap to be announced soon!
+              <sup><span class="badge badge-success">Coming Soon!</span></sup>
+            </div>
+            
+            <!-- <div class="calendar-left">
               <div class="year">2020</div>
 
               <div class="num-date">09</div>
-              <!--num-date -->
+              
               <div class="day">SEPTEMBER</div>
-              <!--day -->
+              
               <div class="current-events">
                 Sale Details
                 <br />
@@ -290,8 +302,8 @@
                   discord and telegram.</span
                 >
               </div>
-              <!--current-events -->
-            </div>
+              
+            </div> -->
             <!-- calendar-left -->
           </div>
         </div>
@@ -343,7 +355,7 @@
     <script>
       $(document).ready(function () {
         // Add smooth scrolling to all links
-        $("a").on("click", function (event) {
+        $("li > a").on("click", function (event) {
           // Make sure this.hash has a value before overriding default behavior
           if (this.hash !== "") {
             // Prevent default anchor click behavior
