@@ -1,0 +1,26 @@
+<mvc:View 
+	controllerName="zlhsl.controller.App"
+	xmlns:f="sap.f" 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	height="100%">
+	
+	<Page showHeader="false" class="sapUiContentPadding">
+		<content>
+			<ComboBox
+				items="{
+					path: '/FunctionSet'
+				}">
+				<core:Item key="{FunctionID}" text="{FunctionText}" />
+			</ComboBox>
+		</content>
+	</Page>
+	<!-- <f:FlexibleColumnLayout
+		id="flexibleColumnLayout"
+		stateChange=".onStateChanged"
+		backgroundDesign="Solid"
+		layout="{/layout}"/> -->
+		
+</mvc:View>

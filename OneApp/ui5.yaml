@@ -1,0 +1,38 @@
+specVersion: '1.0'
+metadata:
+  name: zficontracts
+type: application
+server: 
+  customMiddleware:
+    - name: ui5-middleware-servestatic
+      afterMiddleware: compression
+      mountPath: /ui5
+      configuration:
+        rootPath: "../ui5"
+    - name: ui5-middleware-proxy-basicauth
+      afterMiddleware: compression
+      mountPath: /sap
+      configuration:
+        baseUri: "http://dcdqsflori01.vslhana.com:8001/sap"
+        auth: "bijan.r:solar1234"
+        client: "300"
+builder:
+  customTasks:
+  - name: ui5-task-nwabap-deployer
+    afterTask: generateVersionInfo
+    configuration: 
+      resources:
+        path: dist
+        pattern: "**/*.*"
+      connection:
+        server: http://dcdqsflori01.vslhana.com:8001  
+      authentication:
+        user: bijan.r
+        password: solar1234
+      ui5:
+        language: EN/FR/..
+        package: TODO
+        bspContainer: TODO
+        bspContainerText: UI5 Upload
+        transportNo: TODO
+        calculateApplicationIndex: true      

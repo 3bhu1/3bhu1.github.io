@@ -1,0 +1,129 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "zlhsl",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"ach": "CA-UI5-DOC",
+		"dataSources": {
+			"mainService": {
+				"uri": "/sap/opu/odata/SAP/ZLHSL_TIMCONFIG_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"rootView": {
+			"viewName": "zlhsl.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "fc1"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.0",
+			"libs": {
+				"sap.ui.core": {
+					
+				},
+				"sap.m": {
+					"minVersion": "1.60"
+				},
+				"sap.f": {
+					
+				},
+				"sap.uxap": {
+					
+				}
+			}
+		},
+		"config": {
+			"fullWidth": true
+		},
+		"models": {
+			"": {
+				"dataSource": "mainService"
+			},
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "zlhsl.i18n.i18n"
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.f.routing.Router",
+				"viewType": "XML",
+				"viewPath": "zlhsl.view",
+				"controlId": "flexibleColumnLayout",
+				"transition": "slide",
+				"bypassed": {
+					
+				},
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "{layout}",
+					"name": "master",
+					"target": [
+						"master",
+						"detail"
+					]
+				},
+				{
+					"pattern": "detail/{function}/{layout}",
+					"name": "detail",
+					"target": [
+						"master",
+						"detail"
+					]
+				},
+				{
+					"pattern": "detail/{function}/detailDetail/{functionDetail}/{layout}",
+					"name": "detailDetail",
+					"target": [
+						"master",
+						"detail",
+						"detailDetail"
+					]
+				}
+			],
+			"targets": {
+				"master": {
+					"viewName": "Function",
+					"controlAggregation": "beginColumnPages"
+				},
+				"detail": {
+					"viewName": "Interface",
+					"controlAggregation": "midColumnPages"
+				},
+				"detailDetail": {
+					"viewName": "Segment",
+					"controlAggregation": "endColumnPages"
+				}
+			}
+		}
+	}
+}

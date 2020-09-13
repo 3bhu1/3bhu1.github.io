@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+	xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+	xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZLHSL_TIMCONFIG_SRV" xml:lang="en"
+			sap:schema-version="1"
+			xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Function" sap:label="Functions"
+				sap:content-version="1">
+				<Key>
+					<PropertyRef Name="FunctionID" />
+				</Key>
+				<Property Name="FunctionID" Type="Edm.String"
+					Nullable="false" MaxLength="10" sap:unicode="false"
+					sap:label="Func.ID" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" />
+				<Property Name="FunctionText" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Func.Text" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+				<Property Name="Partner" Type="Edm.String" Nullable="false"
+					MaxLength="10" sap:unicode="false" sap:label="Partner No."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+				<Property Name="PartnerType" Type="Edm.String"
+					Nullable="false" MaxLength="2" sap:unicode="false"
+					sap:label="Partn.Type" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+				<Property Name="Active" Type="Edm.Boolean" Nullable="false"
+					sap:unicode="false" sap:label="Active" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<NavigationProperty Name="ToInterfaces"
+					Relationship="ZLHSL_TIMCONFIG_SRV.Function2Interfaces"
+					FromRole="FromRole_Function2Interfaces"
+					ToRole="ToRole_Function2Interfaces" />
+			</EntityType>
+			<EntityType Name="Interface" sap:label="Interfaces"
+				sap:content-version="1">
+				<Key>
+					<PropertyRef Name="FunctionID" />
+					<PropertyRef Name="InterfaceID" />
+				</Key>
+				<Property Name="FunctionID" Type="Edm.String"
+					Nullable="false" MaxLength="10" sap:unicode="false"
+					sap:label="Func.ID" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" />
+				<Property Name="InterfaceID" Type="Edm.String"
+					Nullable="false" MaxLength="10" sap:unicode="false"
+					sap:label="Interface ID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" />
+				<Property Name="InterfaceText" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Interface ID Txt" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="InterfaceType" Type="Edm.String"
+					Nullable="false" MaxLength="5" sap:unicode="false"
+					sap:label="Interface type" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" />
+				<Property Name="Direction" Type="Edm.String"
+					Nullable="false" MaxLength="1" sap:unicode="false"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false" />
+				<Property Name="MessageType" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Message type" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="MessageCode" Type="Edm.String"
+					Nullable="false" MaxLength="3" sap:unicode="false"
+					sap:label="Message code" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="MessageFunc" Type="Edm.String"
+					Nullable="false" MaxLength="3" sap:unicode="false"
+					sap:label="Msg.function" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="IDocType" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Basic type" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+				<Property Name="IDocExtn" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Extension" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+				<Property Name="InterfaceActive" Type="Edm.Boolean"
+					Nullable="false" sap:unicode="false" sap:label="Active"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false" />
+				<NavigationProperty Name="ToFields"
+					Relationship="ZLHSL_TIMCONFIG_SRV.Interface2Fields"
+					FromRole="FromRole_Interface2Fields"
+					ToRole="ToRole_Interface2Fields" />
+				<NavigationProperty Name="ToSegments"
+					Relationship="ZLHSL_TIMCONFIG_SRV.Interface2Segments"
+					FromRole="FromRole_Interface2Segments"
+					ToRole="ToRole_Interface2Segments" />
+			</EntityType>
+			<EntityType Name="IDocSegment" sap:label="IDoc Segments"
+				sap:content-version="1">
+				<Key>
+					<PropertyRef Name="FunctionID" />
+					<PropertyRef Name="InterfaceID" />
+					<PropertyRef Name="SegmentName" />
+				</Key>
+				<Property Name="FunctionID" Type="Edm.String"
+					Nullable="false" MaxLength="10" sap:unicode="false"
+					sap:label="Func.ID" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" />
+				<Property Name="InterfaceID" Type="Edm.String"
+					Nullable="false" MaxLength="10" sap:unicode="false"
+					sap:label="Interface ID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" />
+				<Property Name="SegmentName" Type="Edm.String"
+					Nullable="false" MaxLength="27" sap:unicode="false"
+					sap:label="Type" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" />
+				<Property Name="SegmentLevel" Type="Edm.String"
+					Nullable="false" MaxLength="1" sap:unicode="false"
+					sap:label="Seg.Level" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+				<Property Name="ParentSegment" Type="Edm.String"
+					Nullable="false" MaxLength="27" sap:unicode="false"
+					sap:label="Parent segment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="ParentFieldName" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Parent Field Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+			</EntityType>
+			<EntityType Name="Fields" sap:label="Fields"
+				sap:content-version="1">
+				<Key>
+					<PropertyRef Name="FunctionID" />
+					<PropertyRef Name="InterfaceID" />
+					<PropertyRef Name="Segment" />
+					<PropertyRef Name="FieldName" />
+					<PropertyRef Name="Counter" />
+				</Key>
+				<Property Name="FunctionID" Type="Edm.String"
+					Nullable="false" MaxLength="10" sap:unicode="false"
+					sap:label="Func.ID" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" />
+				<Property Name="InterfaceID" Type="Edm.String"
+					Nullable="false" MaxLength="10" sap:unicode="false"
+					sap:label="Interface ID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" />
+				<Property Name="Segment" Type="Edm.String" Nullable="false"
+					MaxLength="27" sap:unicode="false" sap:label="Parent segment"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+				<Property Name="FieldName" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Segment field" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" />
+				<Property Name="Counter" Type="Edm.String" Nullable="false"
+					MaxLength="1" sap:unicode="false" sap:label="Counter"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false" />
+				<Property Name="ColumnNo" Type="Edm.String"
+					Nullable="false" MaxLength="2" sap:unicode="false"
+					sap:label="Column" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+				<Property Name="ScreenSelection" Type="Edm.String"
+					Nullable="false" MaxLength="1" sap:unicode="false"
+					sap:label="Screen Field" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="ReferenceTable" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Reference Table" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="ReferenceField" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Reference Field Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="FieldLabel" Type="Edm.String"
+					Nullable="false" MaxLength="20" sap:unicode="false"
+					sap:label="Medium Label" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="FieldFormat" Type="Edm.String"
+					Nullable="false" MaxLength="1" sap:unicode="false"
+					sap:label="Format" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+				<Property Name="FieldOffset" Type="Edm.Int32"
+					Nullable="false" sap:unicode="false" sap:label="Offset"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false" />
+				<Property Name="FieldLength" Type="Edm.Int32"
+					Nullable="false" sap:unicode="false" sap:label="Length"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false" />
+				<Property Name="SegmentFilterFieldName" Type="Edm.String"
+					Nullable="false" MaxLength="30" sap:unicode="false"
+					sap:label="Segment field" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+				<Property Name="SegmentFilterFieldValue" Type="Edm.String"
+					Nullable="false" MaxLength="24" sap:unicode="false"
+					sap:label="Field Value" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+			</EntityType>
+			<Association Name="Interface2Fields"
+				sap:content-version="1">
+				<End Type="ZLHSL_TIMCONFIG_SRV.Interface" Multiplicity="1"
+					Role="FromRole_Interface2Fields" />
+				<End Type="ZLHSL_TIMCONFIG_SRV.Fields" Multiplicity="*"
+					Role="ToRole_Interface2Fields" />
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Interface2Fields">
+						<PropertyRef Name="InterfaceID" />
+						<PropertyRef Name="FunctionID" />
+					</Principal>
+					<Dependent Role="ToRole_Interface2Fields">
+						<PropertyRef Name="InterfaceID" />
+						<PropertyRef Name="FunctionID" />
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Interface2Segments"
+				sap:content-version="1">
+				<End Type="ZLHSL_TIMCONFIG_SRV.Interface" Multiplicity="1"
+					Role="FromRole_Interface2Segments" />
+				<End Type="ZLHSL_TIMCONFIG_SRV.IDocSegment" Multiplicity="*"
+					Role="ToRole_Interface2Segments" />
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Interface2Segments">
+						<PropertyRef Name="InterfaceID" />
+						<PropertyRef Name="FunctionID" />
+					</Principal>
+					<Dependent Role="ToRole_Interface2Segments">
+						<PropertyRef Name="InterfaceID" />
+						<PropertyRef Name="FunctionID" />
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Function2Interfaces"
+				sap:content-version="1">
+				<End Type="ZLHSL_TIMCONFIG_SRV.Function" Multiplicity="1"
+					Role="FromRole_Function2Interfaces" />
+				<End Type="ZLHSL_TIMCONFIG_SRV.Interface" Multiplicity="*"
+					Role="ToRole_Function2Interfaces" />
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Function2Interfaces">
+						<PropertyRef Name="FunctionID" />
+					</Principal>
+					<Dependent Role="ToRole_Function2Interfaces">
+						<PropertyRef Name="FunctionID" />
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZLHSL_TIMCONFIG_SRV_Entities"
+				m:IsDefaultEntityContainer="true"
+				sap:supported-formats="atom json xlsx">
+				<EntitySet Name="FunctionSet"
+					EntityType="ZLHSL_TIMCONFIG_SRV.Function" sap:addressable="false"
+					sap:content-version="1" />
+				<EntitySet Name="InterfaceSet"
+					EntityType="ZLHSL_TIMCONFIG_SRV.Interface" sap:addressable="false"
+					sap:content-version="1" />
+				<EntitySet Name="IDocSegmentSet"
+					EntityType="ZLHSL_TIMCONFIG_SRV.IDocSegment"
+					sap:addressable="false" sap:content-version="1" />
+				<EntitySet Name="FieldSet"
+					EntityType="ZLHSL_TIMCONFIG_SRV.Fields" sap:addressable="false"
+					sap:content-version="1" />
+				<AssociationSet Name="Interface2SegmentSet"
+					Association="ZLHSL_TIMCONFIG_SRV.Interface2Segments"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:content-version="1">
+					<End EntitySet="InterfaceSet"
+						Role="FromRole_Interface2Segments" />
+					<End EntitySet="IDocSegmentSet"
+						Role="ToRole_Interface2Segments" />
+				</AssociationSet>
+				<AssociationSet Name="Function2InterfaceSet"
+					Association="ZLHSL_TIMCONFIG_SRV.Function2Interfaces"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:content-version="1">
+					<End EntitySet="FunctionSet"
+						Role="FromRole_Function2Interfaces" />
+					<End EntitySet="InterfaceSet" Role="ToRole_Function2Interfaces" />
+				</AssociationSet>
+				<AssociationSet Name="Interface2FieldSet"
+					Association="ZLHSL_TIMCONFIG_SRV.Interface2Fields"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:content-version="1">
+					<End EntitySet="InterfaceSet" Role="FromRole_Interface2Fields" />
+					<End EntitySet="FieldSet" Role="ToRole_Interface2Fields" />
+				</AssociationSet>
+			</EntityContainer>
+			<atom:link rel="self"
+				href="https://117.247.238.162:44392/sap/opu/odata/SAP/ZLHSL_TIMCONFIG_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom" />
+			<atom:link rel="latest-version"
+				href="https://117.247.238.162:44392/sap/opu/odata/SAP/ZLHSL_TIMCONFIG_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom" />
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
