@@ -1,0 +1,20 @@
+<mvc:View 
+	controllerName="zlhsl.controller.Function"
+	xmlns:f="sap.f" 
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" 
+	displayBlock="true"
+	height="100%">
+
+	<Page showHeader="false" class="sapUiContentPadding">
+		<content>
+			<ComboBox
+				items="{
+					path: '/FunctionSet'
+				}">
+				<core:Item key="{FunctionID}" text="{FunctionText}" />
+			</ComboBox>
+		</content>
+	</Page>
+</mvc:View>
